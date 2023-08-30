@@ -45,6 +45,10 @@ describe("peek", function() {
     queue.enqueue(5);
     expect(queue.peek()).toBe(3);
   });
+
+  it("Returns null for an empty queue", () => {
+    expect(queue.peek()).toBeNull();
+  })
 });
 
 describe("isEmpty", function() {
