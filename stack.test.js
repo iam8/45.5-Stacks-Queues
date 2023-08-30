@@ -25,7 +25,7 @@ describe("pop", function() {
     stack.push(10);
     stack.push(100);
     stack.push(1000);
-    var removed = stack.pop();
+    const removed = stack.pop();
     expect(removed).toBe(1000);
     expect(stack.size).toBe(2);
     stack.pop();
@@ -45,6 +45,10 @@ describe("peek", function() {
     stack.push(5);
     expect(stack.peek()).toBe(5);
   });
+
+  it("It returns null for an empty stack", () => {
+    expect(stack.peek()).toBeNull();
+  })
 });
 
 describe("isEmpty", function() {
